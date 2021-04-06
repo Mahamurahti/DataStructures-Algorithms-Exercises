@@ -87,7 +87,7 @@ public class BinaryTree {
 
         }else{                                                      // If the correct value was found
             if(root.getLeft() == null && root.getRight() == null) { // and both left and right side are vacant (leaf) ->
-                return null;                                        // Return null (which is inserted into the parent (on row 60 or 58)).
+                return null;                                        // Return null (which is inserted into the parent (on row 83 or 86)).
 
             }else if(root.getLeft() == null) {                      // If only the left side is vacant ->
                 return root.getRight();                             // Return the right side (and insert it into the parent).
