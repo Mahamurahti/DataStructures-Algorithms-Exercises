@@ -41,7 +41,7 @@ public class BinaryHeap {
     public void print() {
         Iterator<Integer> iterator = priorityQueue.iterator();
         int index = 0;
-        while (iterator.hasNext()) // Parent are in the index i / 2 and children are in the index 2 * i and 2 * i + 1
+        while (iterator.hasNext()) // Parents are in the index (i / 2) and children are in the index (2 * i) and (2 * i + 1)
             System.out.println("Index " + (index + 1) + ": " + iterator.next() + ". Parent index: " +
                     (int)Math.floor(++index / 2) + ". Children indexes: " + (index * 2) + " and " + (index * 2 + 1));
     }
