@@ -1,4 +1,4 @@
-package exercise8and9;
+package exercise8to10;
 
 /**
  * @author Eric Keränen
@@ -16,7 +16,9 @@ public class BinaryTree {
     }
 
     /**
+     * Exercise 8:
      * Insert data into the tree with the following rules:
+     *
      * 1. If the tree is empty, set the value as the root
      * 2. If the tree is not empty and the value is lower than the root, set it to the left side
      * 3. If the tree is not empty and the value is greater than the root, set it to the right side
@@ -40,10 +42,38 @@ public class BinaryTree {
                 root.setRight(new BinaryTree(data));// Set the data to the position.
 
         }
+
+        root.setHeight(heightOfANode(this));   // Set the height of the node
     }
 
     /**
+     * Exercise 10:
+     * Return the height of a tree
+     *
+     * @param root {BinaryTree} the tree which height is to be measured
+     * @return {int} height of the tree in the parameter
+     */
+    private int heightOfANode(BinaryTree root) {
+        if(root == null || isLeaf(root))            // If the are no nodes or the node is a leaf ->
+            return 0;                               // Set the height to be zero
+        return Math.max(heightOfANode(root.getLeft()), heightOfANode(root.getRight())) + 1; // Get the max height from
+    }                                                                                       // either side and add one
+
+    /**
+     * Exercise 10:
+     * Determine is the tree's node a leaf or not
+     *
+     * @param root {BinaryTree} the tree which is to be determined
+     * @return true if tree has no child nodes, return false if the tree has at least one child node
+     */
+    private boolean isLeaf(BinaryTree root) {
+        return root.getRight() == null && root.getLeft() == null;
+    }
+
+    /**
+     * Exercise 8:
      * Find data from the tree
+     *
      * @param data {int} data that need to be found
      * @return {BinaryTree} root which holds information about itself and its sides
      */
@@ -67,6 +97,7 @@ public class BinaryTree {
     }
 
     /**
+     * Exercise 9:
      * Delete information form the tree and also modify the tree to keep its binary form (balance)
      *
      * @see "https://www.java2novice.com/java-interview-programs/delete-node-binary-search-tree-bst/"
@@ -105,7 +136,9 @@ public class BinaryTree {
     }
 
     /**
+     * Exercise 9:
      * Find the lowest value from a tree
+     *
      * @param root {BinaryTree} tree that will be traversed through
      * @return {int} the lowest value
      */
@@ -116,6 +149,7 @@ public class BinaryTree {
     }
 
     /*
+    // First attempt
     public boolean delete(int data){
         if(root == null) {
             return false;
@@ -213,6 +247,10 @@ public class BinaryTree {
 
     public void setParent(BinaryTree tree) {
         root.setParent(tree);
+    }
+
+    public int getHeight() {
+        return root.getHeight();
     }
 
     @Override

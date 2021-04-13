@@ -1,4 +1,4 @@
-package exercise8and9;
+package exercise8to10;
 
 class Main {
     public static void main(String[] args) {
@@ -36,7 +36,7 @@ class Main {
                     value = Read.readInt();
                     BinaryTree found = tree.find(value);
                     if(found != null){
-                        System.out.println("Found: " + found.getData() +
+                        System.out.println("Found: " + found.getData() + " with a height of " + found.getHeight() +
                                            ", left: " + found.getLeft() +
                                            ", right: " + found.getRight());
                     }else{

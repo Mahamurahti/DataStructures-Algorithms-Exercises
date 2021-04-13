@@ -1,22 +1,16 @@
-package exercise8and9;
+package exercise8to10;
 
 /**
  * @author Eric Keränen
  */
 public class Node {
 
-    private int data;
+    private int data, height;
     private BinaryTree left, right, parent;
 
     public Node(int value) {
         data = value;
         left = right = null;
-    }
-
-    public Node(int value, BinaryTree left, BinaryTree right) {
-        data = value;
-        this.left = left;
-        this.right = right;
     }
 
     public int getData() {
@@ -49,6 +43,14 @@ public class Node {
 
     public void setParent(BinaryTree tree){
         parent = tree;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getHeight() {
+        return  this.height;
     }
 
     @Override

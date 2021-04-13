@@ -1,4 +1,4 @@
-package exercise8and9;
+package exercise8to10;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
