@@ -50,14 +50,33 @@ public class BinaryTree {
      * Exercise 10:
      * Return the height of a tree
      *
+     * @see "https://www.baeldung.com/cs/binary-tree-height"
+     *
      * @param root {BinaryTree} the tree which height is to be measured
      * @return {int} height of the tree in the parameter
      */
     private int heightOfANode(BinaryTree root) {
         if(root == null || isLeaf(root))            // If the are no nodes or the node is a leaf ->
             return 0;                               // Set the height to be zero
-        return Math.max(heightOfANode(root.getLeft()), heightOfANode(root.getRight())) + 1; // Get the max height from
-    }                                                                                       // either side and add one
+        // Traverse down the right side and the left side of the tree until a leaf is reached. Return the leaf's return
+        // value (0) and add one to it. For every node there is on that side of the tree, one is added to the height.
+        // When a split is reached, the max value of the subtrees is chosen (the side with more deeper "roots") and again
+        // one is added to it. The height is updated automatically as the insert op traverses the tree. See example below.
+        return Math.max(heightOfANode(root.getLeft()), heightOfANode(root.getRight())) + 1;
+    }
+
+    /*
+    *       100 3                       100 4                      100 4            / In the example we see node '110'
+    *      /   \                       /   \                      /   \             / in step 2 choosing its height
+    *    90 0  110 2                90 0  110 3                 90     110 3        / from the height of its left sub-
+    *         /   \        ->            /   \         ->->           /   \         / tree since its the max value
+    *       105 1  120 0              105 2  120 0                  105 2  120 0    / between its subtrees (105 and 120).
+    *       /                         /                            /   \            / In step 4 the node '105' chooses
+    *      102 0                     102 1                       102 1  106 1       / either one of its subtrees, since
+    *                                /                          /         \         / their height is the same.
+    *                              101 0                      101 0        107 0    / Always after choosing a subtree,
+    *       STEP 1                      STEP 2                      STEP 4          / one is added.
+     */
 
     /**
      * Exercise 10:
