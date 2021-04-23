@@ -16,7 +16,6 @@ public class BinaryTree {
     }
 
     /**
-     * Exercise 8:
      * Insert data into the tree with the following rules:
      *
      * 1. If the tree is empty, set the value as the root
@@ -52,7 +51,6 @@ public class BinaryTree {
     }
 
     /**
-     * Exercise 10:
      * Return the height of a tree
      *
      * @see "https://www.baeldung.com/cs/binary-tree-height"
@@ -84,7 +82,6 @@ public class BinaryTree {
      */
 
     /**
-     * Exercise 10:
      * Determine is the tree's node a leaf or not
      *
      * @param root {BinaryTree} the tree which is to be determined
@@ -95,7 +92,6 @@ public class BinaryTree {
     }
 
     /**
-     * Exercise 8:
      * Find data from the tree
      *
      * @param data {int} data that need to be found
@@ -121,7 +117,6 @@ public class BinaryTree {
     }
 
     /**
-     * Exercise 9:
      * Delete information form the tree and also modify the tree to keep its binary form (balance)
      *
      * @see "https://www.java2novice.com/java-interview-programs/delete-node-binary-search-tree-bst/"
@@ -160,7 +155,6 @@ public class BinaryTree {
     }
 
     /**
-     * Exercise 9:
      * Find the lowest value from a tree
      *
      * @param root {BinaryTree} tree that will be traversed through
