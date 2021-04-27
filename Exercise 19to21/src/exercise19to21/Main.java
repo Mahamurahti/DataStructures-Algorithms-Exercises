@@ -30,7 +30,7 @@ public class Main {
         }
 
         // Exercise 19: -----------------------------------------------------------
-        System.out.println("\nSort the card according to balance:\n");
+        System.out.println("\nSort the cards according to balance:\n");
 
         Collections.sort(cardUsers);
 
@@ -40,7 +40,7 @@ public class Main {
         }
 
         // Exercise 20: -----------------------------------------------------------
-        System.out.println("\nSort the card according to travelling number:\n");
+        System.out.println("\nSort the cards according to travelling number:\n");
 
         Collections.sort(cardUsers, new TravellingNumberComparator());
 
@@ -49,7 +49,7 @@ public class Main {
             System.out.println(iterator.next());
         }
 
-        System.out.println("\nSort the card according to owner name:\n");
+        System.out.println("\nSort the cards according to owner name:\n");
 
         Collections.sort(cardUsers, new NameComparator());
 
@@ -59,7 +59,7 @@ public class Main {
         }
 
         // Exercise 21: -----------------------------------------------------------
-        System.out.println("\nSort the card according to travelling number using lambda:\n");
+        System.out.println("\nSort the cards according to travelling number using lambda:\n");
 
         Collections.sort(cardUsers, (t1, t2) -> Integer.compare(t1.getTravellerNumber(), t2.getTravellerNumber()));
         /*Collections.sort(cardUsers, Comparator.comparingInt(TrafficCard::getTravellerNumber));*/
