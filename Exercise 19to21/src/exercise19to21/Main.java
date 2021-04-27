@@ -29,6 +29,7 @@ public class Main {
             System.out.println(iterator.next());
         }
 
+        // Exercise 19: -----------------------------------------------------------
         System.out.println("\nSort the card according to balance:\n");
 
         Collections.sort(cardUsers);
@@ -38,6 +39,7 @@ public class Main {
             System.out.println(iterator.next());
         }
 
+        // Exercise 20: -----------------------------------------------------------
         System.out.println("\nSort the card according to travelling number:\n");
 
         Collections.sort(cardUsers, new TravellingNumberComparator());
@@ -56,7 +58,7 @@ public class Main {
             System.out.println(iterator.next());
         }
 
-        // Exercise 21:
+        // Exercise 21: -----------------------------------------------------------
         System.out.println("\nSort the card according to travelling number using lambda:\n");
 
         Collections.sort(cardUsers, (t1, t2) -> Integer.compare(t1.getTravellerNumber(), t2.getTravellerNumber()));
