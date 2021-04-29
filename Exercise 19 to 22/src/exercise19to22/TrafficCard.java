@@ -1,4 +1,4 @@
-package exercise19to21;
+package exercise19to22;
 
 /**
  * @author Eric Keränen

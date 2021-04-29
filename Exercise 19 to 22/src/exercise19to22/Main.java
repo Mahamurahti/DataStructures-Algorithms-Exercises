@@ -1,4 +1,4 @@
-package exercise19to21;
+package exercise19to22;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -68,6 +68,15 @@ public class Main {
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+
+        // Exercise 22: -----------------------------------------------------------
+        System.out.println("\nFilter the cards so that only those with balance of 70 or under appear and sort the cards " +
+                "according to balance using streams:\n");
+        cardUsers
+                .stream()
+                .filter(t -> t.getBalance() <= 70)
+                .sorted((t1, t2) -> Float.compare(t1.getBalance(), t2.getBalance()))
+                .forEach(t -> System.out.println(t));
     }
 
 }
